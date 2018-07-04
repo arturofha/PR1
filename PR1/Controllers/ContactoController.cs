@@ -36,6 +36,24 @@ namespace PR1.Controllers
             return Ok(ct);
         }
 
+        //metodo post para ingresar contactos
+        public IEnumerable<Contacto> Post([FromBody]Contacto nuevoContacto)
+        {
+            //1. hacemos una lista del array de contactos que tenemos
+            List<Contacto> listaContactos = contactos.ToList<Contacto>();
+
+            //2. generamos un id nuevo para que no se repita
+            nuevoContacto.Id = listaContactos.Count;
+
+            //3. agregamos el contacto que recibieron a la lista
+            listaContactos.Add(nuevoContacto);
+
+            //4. convertimos los contactos a un Array nuevamente.
+            contactos = listaContactos.ToArray();
+
+            return contactos;
+        }
+
 
 
     }
