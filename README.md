@@ -1,4 +1,6 @@
-# PR1
-Practica 1 Web APis<br/>
-Ejemplo de una api de lista de Contactos <br/>
-Tiene Acción GET
+#Practica 1 Web Apis
+
+	ASP.NET Web Api<br />
+Ejemplo de una Web Api de lista de Contactos <br/>
+
+		Tiene acciones GET, PUT, DELETE, POST

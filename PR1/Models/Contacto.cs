@@ -11,5 +11,13 @@ namespace PR1.Models
         public string Nombre { get; set; }
         public string Apellido { get; set; }
 
+        // creamos el constructor del objeto con valores default
+        public Contacto()
+        {
+            Id = -1;
+            Nombre = string.Empty;
+            Apellido= string.Empty;
+        }
+
     }
 }

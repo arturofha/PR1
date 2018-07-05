@@ -54,7 +54,27 @@ namespace PR1.Controllers
             return contactos;
         }
 
+        public IEnumerable<Contacto> Put(int id,[FromBody] Contacto contactoCambiado) {            
 
+            for(int i = 0; i < contactos.Length; i++)
+            {
+                if(contactos[i].Id == id)
+                {
+                    contactos[i].Nombre = contactoCambiado.Nombre;
+                    contactos[i].Apellido = contactoCambiado.Apellido;
+                }
+            }
+
+            return contactos;
+        }
+
+       public IEnumerable<Contacto> Delete(int id) {
+
+            //borramos la línea haciendo un select de todos menos el que tiene el id indicado
+            contactos = contactos.Where<Contacto>(x => x.Id != id).ToArray<Contacto>();
+
+            return contactos;
+       }
 
     }
 }
