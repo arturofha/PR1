@@ -18,17 +18,19 @@ namespace PR1.Controllers
         };
 
         //Devolver una lista completa
+        [Route("api/Contacto")]
         public IEnumerable<Contacto> Get()
         {
             return contactos;
         }
 
+        [Route("api/Contacto/{id:int}")]
         public IHttpActionResult Get(int id)
         {
             // buscamos en la lista y obtenemos el primer id que encontremos
             Contacto ct = contactos.FirstOrDefault<Contacto>(x => x.Id == id);
 
-            if(ct == null)
+            if (ct == null)
             {
                 return NotFound();
             }
@@ -37,6 +39,7 @@ namespace PR1.Controllers
         }
 
         //metodo post para ingresar contactos
+        
         public IEnumerable<Contacto> Post([FromBody]Contacto nuevoContacto)
         {
             //1. hacemos una lista del array de contactos que tenemos
@@ -79,11 +82,21 @@ namespace PR1.Controllers
         //podemos crear más acciones de tipo get poniendole el nombre "Get" al principio y luego el nombre que queramos
         //ésto es una opción de web api 1
         //también la opción de configurar el routing Template para agregarle el action
+        //para usar web api routing de web api 2, usamos el Route("dirección/{parámetros}")
+        [Route("api/Contacto/buscaxGet/{valor}")]
         public IEnumerable<Contacto> GetContactoPorNombre(string valor)
         {
             Contacto[] contactArray = contactos.Where<Contacto>(x => x.Nombre.Contains(valor)).ToArray<Contacto>();
              return contactArray;
         }
 
+        //en este ejemplo el route se lo ponemos manual y como el nombre no comienza con get le ponemos el verbo al inicio con  [HttpGet]
+        [Route("api/Contacto/busca/{valor}")]
+        [HttpGet]
+        public IEnumerable<Contacto> BuscarContactoPorNombre(string valor)
+        {
+            Contacto[] contactArray = contactos.Where<Contacto>(x => x.Nombre.Contains(valor)).ToArray<Contacto>();
+            return contactArray;
+        }
     }
 }
