@@ -76,5 +76,14 @@ namespace PR1.Controllers
             return contactos;
        }
 
+        //podemos crear más acciones de tipo get poniendole el nombre "Get" al principio y luego el nombre que queramos
+        //ésto es una opción de web api 1
+        //también la opción de configurar el routing Template para agregarle el action
+        public IEnumerable<Contacto> GetContactoPorNombre(string valor)
+        {
+            Contacto[] contactArray = contactos.Where<Contacto>(x => x.Nombre.Contains(valor)).ToArray<Contacto>();
+             return contactArray;
+        }
+
     }
 }
