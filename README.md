@@ -1,12 +1,10 @@
-#Practica 1 Web Apis
+#Practica 1 Web API
 
-	ASP.NET Web Api <br />
-Ejemplo de una Web Api de lista de Contactos <br/>
-
-		Tiene acciones GET, PUT, DELETE, POST
-
+	ASP.NET Web Api 
+	
+Ejemplo de una Web Api de lista de Contactos la cual contiene las acciones GET, PUT, DELETE, POST
 		
-Para usar Entity Framework Code-first Migrations hicimos lo siguiente:
+	Para usar Entity Framework Code-first Migrations hicimos lo siguiente:
 
 1. Aseguramos que esté carpeta App_Data 
 2. En Package Manager Console ejecutamos: enable-migrations
