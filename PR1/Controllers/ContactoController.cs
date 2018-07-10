@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace PR1.Controllers
 {
+    [RoutePrefix("api/Contacto")]
     public class ContactoController : ApiController
     {
         Contacto[] contactos = new Contacto[]{
@@ -18,13 +19,13 @@ namespace PR1.Controllers
         };
 
         //Devolver una lista completa
-        [Route("api/Contacto")]
+        [Route("")]
         public IEnumerable<Contacto> Get()
         {
             return contactos;
         }
 
-        [Route("api/Contacto/{id:int}")]
+        [Route("{id:int}")]
         public IHttpActionResult Get(int id)
         {
             // buscamos en la lista y obtenemos el primer id que encontremos
@@ -40,6 +41,7 @@ namespace PR1.Controllers
 
         //metodo post para ingresar contactos
         
+            [Route("")]
         public IEnumerable<Contacto> Post([FromBody]Contacto nuevoContacto)
         {
             //1. hacemos una lista del array de contactos que tenemos
@@ -57,6 +59,7 @@ namespace PR1.Controllers
             return contactos;
         }
 
+        [Route("{id:int}")]
         public IEnumerable<Contacto> Put(int id,[FromBody] Contacto contactoCambiado) {            
 
             for(int i = 0; i < contactos.Length; i++)
@@ -83,7 +86,7 @@ namespace PR1.Controllers
         //ésto es una opción de web api 1
         //también la opción de configurar el routing Template para agregarle el action
         //para usar web api routing de web api 2, usamos el Route("dirección/{parámetros}")
-        [Route("api/Contacto/buscaxGet/{valor}")]
+        [Route("buscaxGet/{valor}")]
         public IEnumerable<Contacto> GetContactoPorNombre(string valor)
         {
             Contacto[] contactArray = contactos.Where<Contacto>(x => x.Nombre.Contains(valor)).ToArray<Contacto>();
@@ -91,7 +94,7 @@ namespace PR1.Controllers
         }
 
         //en este ejemplo el route se lo ponemos manual y como el nombre no comienza con get le ponemos el verbo al inicio con  [HttpGet]
-        [Route("api/Contacto/busca/{valor}")]
+        [Route("busca/{valor}")]
         [HttpGet]
         public IEnumerable<Contacto> BuscarContactoPorNombre(string valor)
         {
