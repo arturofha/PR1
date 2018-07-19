@@ -1,0 +1,86 @@
+[33mcommit 34cb6e6ef04c5f92d576d74d106df8a99e458e1e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Mon Jul 9 21:19:45 2018 -0600
+
+    Update README.md
+
+[33mcommit deb614c810f4cea21068311a9a7a2df3e459a18d[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Mon Jul 9 21:17:25 2018 -0600
+
+    Se agrega Entity Framework code-first  Migrations
+
+[33mcommit b03e392633d56b604ca95835564a17a921554f5f[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Mon Jul 9 19:52:09 2018 -0600
+
+    Se cambia el Route de contacto para manejarlo por medio de Route Prefixes
+
+[33mcommit afe21e679766e96e16293735ad87887ea50b4c36[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Wed Jul 4 21:48:46 2018 -0600
+
+    Se cambia la configuración del routing para utilizar solo el web api routing 2
+
+[33mcommit 47d5311b33a67044aef9c1f59412fee2f6972edd[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Wed Jul 4 21:13:40 2018 -0600
+
+    Agrega otra forma de programar un get, utilizado en web api 1
+
+[33mcommit 8244fd7355f7166bb3b06ea12589db5e91e98049[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Wed Jul 4 20:58:17 2018 -0600
+
+    Agrega put para actualizar campos.
+    Agrega delete para eliminar registro.
+    Agrega contructor en objeto contacto
+
+[33mcommit c2a37da30ba8c78fbb70bdd3de89070678db329c[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 22:17:38 2018 -0600
+
+    Se agrega método POST para ingresar contactos
+
+[33mcommit a62918031f1a85e45a9db0e1e96794a7d4e4ccb6[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 22:04:09 2018 -0600
+
+    Cambios en Readme 2.0
+
+[33mcommit 9a074edcdd13e154c8cc82ddd8ca56b10f63452b[m
+Merge: 17cc53e c48cba4
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 22:01:50 2018 -0600
+
+    Merge branch 'master' of https://github.com/arturofha/PR1
+
+[33mcommit 17cc53ee57702f21b7c0f127d95db81760984989[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 22:01:27 2018 -0600
+
+    Cambio en readme
+
+[33mcommit c48cba4465357b1d7fbea32c49d34d25ac3066d0[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 21:54:49 2018 -0600
+
+    Se agrega acción Get la cual recibe un id y devuelve un resultado
+
+[33mcommit 27b4e34a71c3a87114cced9ca0b1ac9d874a2e4d[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 21:17:53 2018 -0600
+
+    Create README.md
+
+[33mcommit 774b45366b66bedd1911a1812117ca6eaa178120[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 21:09:44 2018 -0600
+
+    Inicio practica 1
+
+[33mcommit 85957574358aff734785fa31f93a4af1650ffed1[m
+Author: Arturo Herrera Aguilar <arturofha@hotmail.com>
+Date:   Tue Jul 3 21:00:21 2018 -0600
+
+    Add .gitignore and .gitattributes.
